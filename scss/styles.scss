@@ -3,11 +3,34 @@
 // --- VARIABLES ---
 // these are better than normal CSS-variables
 $deepBlue: hsl(195, 91%, 13%);
+$offWhite: hsl(220, 27%, 98%);
+
 $sectionHeading: clamp(1rem, calc(3vw + 1rem), 3rem);
 
 #main-nav {
   background: $deepBlue;
-}
+
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-flow: row wrap;
+  }
+
+  //li {
+    //TheNetNinja here uses float.
+    //please don't make navbars with floats.
+    //not in 2021.
+  //}
+
+  a{
+    color: $offWhite;
+    text-decoration: none;
+    padding: 1em;
+    display: inline-block;
+    text-align: center;
+  }
+} //end #main-nav
 
 section h1 {
   font-size: $sectionHeading;
