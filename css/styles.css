@@ -1,12 +1,9 @@
-.rule {
-  color: red;
+#main-nav {
+  background: #03303f;
 }
 
-.rule a {
-  color: blue;
-}
-
-.rule a span {
-  color: pink;
+section h1 {
+  font-size: clamp(1rem, calc(3vw + 1rem), 3rem);
+  color: #03303f;
 }
 /*# sourceMappingURL=styles.css.map */

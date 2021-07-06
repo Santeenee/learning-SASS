@@ -1,10 +1,15 @@
-.rule {
-  color: red;
-  a {
-    color: blue;
+// comments with //... cool!
 
-    span {  
-      color: pink;
-    }
-  }
+// --- VARIABLES ---
+// these are better than normal CSS-variables
+$deepBlue: hsl(195, 91%, 13%);
+$sectionHeading: clamp(1rem, calc(3vw + 1rem), 3rem);
+
+#main-nav {
+  background: $deepBlue;
+}
+
+section h1 {
+  font-size: $sectionHeading;
+  color: $deepBlue;
 }
