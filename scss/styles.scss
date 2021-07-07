@@ -1,40 +1,6 @@
-// comments with //... cool!
-
-// --- VARIABLES ---
-// these are better than normal CSS-variables
-$deepBlue: hsl(195, 91%, 13%);
-$offWhite: hsl(220, 27%, 98%);
-
-$sectionHeading: clamp(1rem, calc(3vw + 1rem), 3rem);
-
-$bannerHeading: clamp(2rem, calc(5vw + 1rem), 6rem);
-
-// Mixins
-
-@mixin banner {
-  width: 100%;
-  position: relative;
-  color: white;
-
-  .banner-content {
-    position: absolute;
-    top: 50px;
-    width: 100%;
-  }
-  img {
-    width: 100%;
-  }
-  span {
-    font-size: $bannerHeading;
-    display: block;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  span.title {
-    font-weight: normal;
-    margin-bottom: 30px;
-  }
-}
+@import "_reset";
+@import "_variables";
+@import "_mixins"; //@import url(_mixins.scss);
 
 #main-nav {
   background: $deepBlue;
