@@ -113,6 +113,9 @@ section h1 {
     margin: 0;
     font-size: clamp(1rem, calc(3vw + 1rem), 3rem);
   }
+  .lead-banner .banner-content {
+    top: 20px;
+  }
 }
 
 .lessons-banner {
@@ -143,6 +146,9 @@ section h1 {
     margin: 0;
     font-size: clamp(1rem, calc(3vw + 1rem), 3rem);
   }
+  .lessons-banner .banner-content {
+    top: 20px;
+  }
 }
 @media screen and (max-width: 1060px) {
   .lessons-banner ul {
@@ -154,11 +160,31 @@ section h1 {
         align-items: center;
     -ms-flex-flow: row nowrap;
         flex-flow: row nowrap;
-    margin: 1em 0 0;
+    margin: 2em 0 0;
+    min-height: 15em;
   }
   .lessons-banner ul li {
     margin: 0;
     padding: 0 1em;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+  .lessons-banner ul li:nth-child(2) {
+    -ms-flex-item-align: center;
+        align-self: center;
+  }
+  .lessons-banner ul li:nth-child(3) {
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+  }
+}
+@media screen and (max-width: 900px) {
+  .lessons-banner ul {
+    min-height: auto;
+  }
+  .lessons-banner ul li {
+    -ms-flex-item-align: start !important;
+        align-self: flex-start !important;
   }
 }
 .lessons-banner li {
