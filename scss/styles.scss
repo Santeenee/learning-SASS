@@ -1,15 +1,10 @@
-@import "_reset";
-@import "_variables";
-@import "_mixins"; //@import url(_mixins.scss);
+@use 'partials' as *;
 
 #main-nav {
   background: $deepBlue;
 
   ul {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-flow: row wrap;
+    @include flexRowWrap;
   }
 
   //li {
@@ -50,5 +45,30 @@ section h1 {
     font-size: 1em;
     max-width: 500px;
     margin: 60px 0;
+  }
+}
+
+#services {
+  margin-bottom: 60px;
+  
+  ul {
+    @include flexRowWrap;
+    gap: calc(1em + 5vw);
+  }
+  li {
+    text-align: center;
+    flex: 1;
+  }
+  img {
+    width: 60%;
+    margin: 20px 20%;
+  }
+  a {
+    text-decoration: none;
+    color: $deepBlue;
+    font-weight: bold;
+    &:hover {
+      color: red;
+    }
   }
 }
