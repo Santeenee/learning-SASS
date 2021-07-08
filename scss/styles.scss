@@ -3,25 +3,32 @@
 #main-nav {
   background: $deepBlue;
 
+  .wrapper {
+    padding: 0;
+  }
+
   ul {
     @include flexRowWrap;
   }
 
-  //li {
+  li {
     //TheNetNinja here uses float.
     //please don't make navbars with floats.
     //not in 2021.
-  //}
+    flex: 1 1 0;
+  }
 
   a{
     color: $offWhite;
     text-decoration: none;
     padding: 1em;
-    display: inline-block;
+    display: block;
     text-align: center;
 
     &:hover {
-      background: $notSoDeepBlue;
+      //functions
+      background: invert($deepBlue);
+      color: invert($color: $offWhite);
     }
   }
 } //end #main-nav
@@ -68,7 +75,23 @@ section h1 {
     color: $deepBlue;
     font-weight: bold;
     &:hover {
-      color: red;
+      color: lighten(complement($color: $deepBlue), 40);
     }
+  }
+}
+
+#projects ul{
+  @include grid(6, 1.5em);
+  gap: 1em;
+  margin-bottom: 3em;
+  li {
+    display: flex;
+    justify-content: center;
+  }
+  
+  img {
+    display: block;
+    margin: 0;
+    padding: 0;
   }
 }
