@@ -1,40 +1,11 @@
-@use 'variables' as *;
-
-@mixin banner {
-  width: 100%;
-  position: relative;
-  color: white;
-
-  .banner-content {
-    position: absolute;
-    top: 50px;
-    width: 100%;
-  }
-  img {
-    width: 100%;
-  }
-  span {
-    font-size: $bannerHeading;
-    display: block;
-    text-transform: uppercase;
-    font-weight: bold;
-  }
-  .title {
-    font-weight: normal;
-    margin-bottom: 30px;
-  }
-
-  @include mediaQuery(554px){
-    .title, .sub-title {
-      margin: 0;
-      font-size: $sectionHeading;
-    }
-    .banner-content {
-      top: 20px;
-    }
-  };
-}
-
+/*
+ 
+ 888888 88     888888 Yb  dP     
+ 88__   88     88__    YbdP      
+ 88""   88  .o 88""    dPYb      
+ 88     88ood8 888888 dP  Yb     
+ 
+*/
 @mixin flexRowWrap {
   display: flex;
   justify-content: space-evenly;
@@ -56,21 +27,43 @@
   flex-flow: column nowrap;
 }
 
-@mixin grid($cols, $gap) {
+@mixin flexCustom($direction, $wrap, $justify, $align) {
+  display: flex;
+  flex-flow: #{$direction} #{$wrap};
+  justify-content: #{$justify};
+  align-items: #{$align};
+}
+
+/* 
+
+  dP""b8 88""Yb 88 8888b.      
+ dP   `" 88__dP 88  8I  Yb     
+ Yb  "88 88"Yb  88  8I  dY     
+  YboodP 88  Yb 88 8888Y"  
+
+*/
+@mixin grid($cols, $baseGap) {
   display: grid;
   grid-template-columns: repeat($cols, 1fr);
   grid-auto-rows: auto;
-  gap: $gap;
+  gap: calc(#{$baseGap} + 1vw);
 }
 
-//this... WOW
+/* 
+
+ 8b    d8 888888 8888b.  88    db         dP"Yb  88   88 888888 88""Yb 88 888888 .dP"Y8 
+ 88b  d88 88__    8I  Yb 88   dPYb       dP   Yb 88   88 88__   88__dP 88 88__   `Ybo." 
+ 88YbdP88 88""    8I  dY 88  dP__Yb      Yb b dP Y8   8P 88""   88"Yb  88 88""   o.`Y8b 
+ 88 YY 88 888888 8888Y"  88 dP""""Yb      `"YoYo `YbodP' 888888 88  Yb 88 888888 8bodP' 
+
+*/
 @mixin mediaQuery($arg...) {
   @if length($arg) == 1 {
     @media screen and (max-width: nth($arg, 1)) {
       @content;
     }
-  }
-  @if length($list: arg) == 2 {
+    //not used ⤵
+  } @else if length($arg) == 2 {
     @media screen and (max-width: nth($arg, 1)) and (min-width: nth($arg, 2)) {
       @content;
     }

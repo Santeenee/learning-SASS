@@ -1,0 +1,38 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+%banner {
+  width: 100%;
+  position: relative;
+  color: white;
+
+  .banner-content {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+  }
+  img {
+    width: 100%;
+  }
+  span {
+    font-size: $bannerHeading;
+    display: block;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .title {
+    font-weight: normal;
+    margin-bottom: 30px;
+  }
+
+  @include mediaQuery(554px) {
+    .title,
+    .sub-title {
+      margin: 0;
+      font-size: $sectionHeading;
+    }
+    .banner-content {
+      top: 10px;
+    }
+  }
+}
