@@ -66,11 +66,11 @@ section h1 {
   @extend %banner;
 
   ul {
+    max-height: 20em;
+
     @include mediaQuery(1060px) {
       @include flexRowNoWrap;
       margin: 1.5em 0 0;
-
-      min-height: 15em;
 
       li {
         margin: 0;
@@ -85,10 +85,11 @@ section h1 {
       }
     }
     @include mediaQuery(900px) {
+      overflow: auto;
       min-height: auto;
     }
     @include mediaQuery(500px) {
-      @include flexCustom("column", "nowrap", "center", "center");
+      @include flexCustom(column, nowrap, center, center);
       margin: 0.5em 0 0;
     }
   }
@@ -131,7 +132,7 @@ section h1 {
     color: $deepBlue;
     font-weight: bold;
     &:hover {
-      color: lighten(complement($color: $deepBlue), 40);
+      color: lighten(complement($deepBlue), 40);
     }
   }
 }
