@@ -55,7 +55,7 @@ section h1 {
   }
 
   a {
-    color: $offWhite;
+    color: set-text-color($deepBlue);
     text-decoration: none;
     padding: 1em;
     display: block;
@@ -65,7 +65,7 @@ section h1 {
     &:hover {
       //functions
       background: invert($deepBlue);
-      color: invert($color: $offWhite);
+      color: invert(set-text-color($deepBlue));
     }
   }
 } //end #main-nav
