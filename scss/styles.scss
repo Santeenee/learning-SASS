@@ -38,9 +38,9 @@ section h1 {
   ul {
     @include flexRowWrap;
 
-    @include mediaQuery(600px) {
+    /*@include mediaQuery(600px) {
       @include flexColumnNoWrap;
-    }
+    }*/
   }
 
   li {
