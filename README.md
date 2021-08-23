@@ -6,4 +6,6 @@ Following a tutorial step by step on SASS. A CSS extension that allows you to wr
 
 Actually, for most of [this course \(by TheNetNinja\)](https://www.youtube.com/playlist?list=PL4cUxeGkcC9iEwigam3gTjU_7IA3W2WZA) I am going to write SCSS code, not SASS. The reasons for that are explained in the [2nd video](https://www.youtube.com/watch?v=b0d--jixRwg&t=167s) of the playlist.
 
+Update: He's making a [new tutorial](https://www.youtube.com/watch?v=_kqN4hl9bGc) about SASS.
+
 ### [Here is my dummy website built using SASS](https://santeenee-dummy-website.netlify.app/)
